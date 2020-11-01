@@ -71,6 +71,26 @@ video {
     height: 100%;
 }
 
+.logo-box {
+    position: relative;
+}
+
+.logo-ano {
+    position: absolute;
+    right: 44px;
+    top: 24px;
+    display: block;
+    font-weight: bold;
+    font-size: 34px;
+
+    text-align: center;
+
+    color: @purple;
+
+    transform-origin: center center;
+    transform: rotate(-90deg);
+}
+
 .btn {
     display: inline-block;
     padding: 1.6rem 3.2rem;
@@ -81,6 +101,17 @@ video {
 
     background: @purple;
     border-radius: 98px;
+
+    text-decoration: none;
+
+    transition: transform .2s;
+
+    :hover {
+        text-decoration: none;
+        transform: scale(1.1);
+
+        transition: transform .2s;
+    }
 }
 
 @media (min-width: 2560px) {
