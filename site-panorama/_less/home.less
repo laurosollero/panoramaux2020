@@ -44,6 +44,7 @@
         .intro-small {
             display: inline-block;
             margin-left: 1.6rem;
+            margin-top: 2.4rem;
             font-size: 1.6rem;
             color: @grey-dark;
         }
@@ -106,9 +107,11 @@
 
     .indicadores {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(458px, 1fr));
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
 
         .box-item {
+           
             padding: 2.4rem;
             text-align: center;
 
@@ -195,8 +198,11 @@
 
     .form-email {
 
-        position: relative;
+        iframe {
+            width: 100%;
+        }
 
+    /*    
         input[type="email"] {
             padding: 44px;
 
@@ -223,22 +229,27 @@
             
         }
 
+        
+
         input[type="submit"] {
             position: absolute;
             top: 1.4rem;
             right: 11.5rem;
         }
+
+        */
     }
 
 
     .cta {
-        max-width: 1100px;
-        max-height: 1100px;
-
+        width: 70vw;
+        height: 70vw;
         margin: 0 auto;
 
         box-sizing: border-box;
-        padding: 300px 100px;
+        padding: 15vw 4vw 4vw 4vw;
+
+       
 
         border-radius: 1100px;
         background-color: @purple-light;
@@ -286,6 +297,11 @@
         .footer-texto {
             margin-top: 5.6rem;
             color: @grey;
+
+            a{
+                color: @grey;
+                font-weight: bold;
+            }
         }
 
         .apoios {
@@ -298,11 +314,99 @@
             color: @grey;
         }
 
-        .logo-zoly {max-width: 150px;}
+        .logo-zoly {
+            max-width: 150px;
+            fill: @grey;
+        }
 
     }
 
+    @keyframes rodar {
+        from {transform: rotate(0);}
+        to {transform: rotate(180deg);}
+      }
 
+    @keyframes crescer {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+    }
+
+    .shape-quadrado {
+        position: absolute;
+        top: 400px;
+        left: -5%;
+        z-index: -1;
+
+        width: 30vw;
+        height: auto;
+
+        animation-name: rodar;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .shape-circulo {
+        position: absolute;
+        top: 600px;
+        right: -30%;
+        z-index: -1;
+
+        width: 70vw;
+        height: auto;
+
+        animation-name: crescer;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .shape-triangulo {
+        position: absolute;
+        top: 2000px;
+        left: 5%;
+        z-index: -1;
+
+        width: 50vw;
+        height: auto;
+
+        animation-name: rodar;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .shape-quadrado2 {
+        position: absolute;
+        bottom: 1800px;
+        right: -5%;
+        z-index: -1;
+
+        width: 30vw;
+        height: auto;
+
+        animation-name: rodar;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+
+    @media screen and (max-width: 1107px) {
+        
+        .cta { 
+            margin-top: 6.4rem;
+            padding-top: 12vw;
+
+            .cta-titulo { font-size: 4.4rem; }
+    
+            .cta-texto { font-size: 2.4rem; }
+         
+        }
+        
+        
+    }
 
 
     @media screen and (max-width:1024px) {
@@ -312,30 +416,141 @@
         .historico,
         .newsletter {
             display: block;
-            
+            padding: 6.4rem 4.0rem;   
         }
 
+        .intro {padding-top: 4.0rem;} 
 
-        .indicadores {
-            .box-item {
-                border: 0;
-                border-bottom: 1px solid @grey-light;
+        .logo-panorama-header {
+            padding: 0;
+        }
 
-                :last-child {border: none;}
+        .intro-conteudo {
+            padding: 0;
+
+            .intro-titulo {
+                font-size: 4.4rem;
+            }
+
+            .intro-texto {
+                font-size: 2.4rem;
+                line-height: 4.0rem;
             }
         }
 
+        .section-text {
+            padding: 0;
+    
+            h2 {
+                position: static;
+                top: 160px;
+                left: 16px;
+    
+                display: inline-block;
+                
+    
+                margin: 0;
+                padding: 0;
+                
+                font-weight: bold;
+                font-size: 3.2rem;
+                text-align: center;
+                color: @purple;
+    
+                transform-origin: 0 0;
+                transform: rotate(0);
+            }
+
+            p {
+                padding-left: 0;
+            }
+        }
+
+        .indicadores,
+        .apresentacao-slides,
+        .historico-anos,
+        .form-email {
+            
+            
+            padding: 0
+        }
 
         footer {
             padding: 10.0rem 3.2rem;
         }
 
+
     }
 
+    @media screen and (max-width:900px) {
+        .cta {
+            width: 98vw;
+            height: 98vw;
+
+            padding-top: 24vw;
+        }
+    }
 
     @media screen and (max-width:620px) {
+
+        .intro-conteudo {
+            .intro-small {
+                margin-left: 0;
+            }
+        }
+
+        .indicadores {
+            .valor-indicador {
+                
+                margin-bottom: 1.6rem;
+    
+                font-size: 4.4rem;
+                
+            }
+    
+            .texto-indicador {
+                font-size: 1.8rem;
+                
+            }
+        }
+
+        .historico-anos {
+            li {
+                .respostas {
+                    margin-left: 3.2rem;
+                }
+            }
+            
+        }
+
+        .cta {
+
+            .cta-titulo { font-size: 3.2rem; }
+    
+            .cta-texto { font-size: 1.8rem; }
+        }
+
+
         footer {
+            margin-top: -100px;
+
             .logo-item { max-height: 6.0rem;}
+        }
+
+        .shape-quadrado {
+            top: 300px;
+        }
+
+        .shape-circulo {
+            top: 700px;
+        }
+
+        .shape-triangulo {
+            top: 1800px;
+        }
+
+        .shape-quadrado2 {
+            bottom: 1400px;
         }
     }
 

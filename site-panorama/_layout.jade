@@ -1,8 +1,32 @@
 doctype
 html
   head
+    title Panorama UX 2021
+    meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    meta(name="description" content="Buscamos um autoconhecimento coletivo, que nos ajude a entender o estado atual do mercado e a fazer melhores escolhas para nossas carreiras, projetos e vidas.")
+
     link(href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet")
     link(rel="stylesheet" href="/main.css")
+
+    //Open Graph data
+    meta(property="og:title" content="Panorama UX")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content=" ")
+    meta(property="og:image" content=" ")
+    meta(property="og:description" content="Buscamos um autoconhecimento coletivo, que nos ajude a entender o estado atual do mercado e a fazer melhores escolhas para nossas carreiras, projetos e vidas.")
+
+    
+    //Global site tag (gtag.js) - Google Analytics
+
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-29708924-3")
+    
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date())
+      gtag('config', 'UA-29708924-3')
+
   
   != yield
