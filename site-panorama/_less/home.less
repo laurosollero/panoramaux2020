@@ -202,42 +202,6 @@
             width: 100%;
         }
 
-    /*    
-        input[type="email"] {
-            padding: 44px;
-
-            height: 98px;
-            width: 100%;
-
-            background: @white;
-            border: 1px solid @grey-light;
-            border-radius: 98px;
-            font-size: 3.2rem;
-
-            box-sizing: border-box;
-
-            ::placeholder {
-                color: @grey-light;
-            }
-
-            :focus {
-                outline: none;
-
-                border-color: @purple;
-                border-width: 2px;
-            }
-            
-        }
-
-        
-
-        input[type="submit"] {
-            position: absolute;
-            top: 1.4rem;
-            right: 11.5rem;
-        }
-
-        */
     }
 
 
@@ -277,6 +241,7 @@
         text-align: center;
 
         background-color: @white;
+        border-top: 1px solid @grey-light;
 
         .logos {
             display: grid;
@@ -516,9 +481,26 @@
 
         .historico-anos {
             li {
-                .respostas {
-                    margin-left: 3.2rem;
+                .ano {
+                    font-size: 3.2rem;
+                    font-weight: bold;
+                    color: @purple;
+    
+                    vertical-align: middle;
                 }
+
+                .respostas {
+                    margin-left: 2.4rem;
+                    font-size: 1.8rem;
+                }
+
+                .ic-seta {
+                    margin-top: 0.8rem;
+                }
+
+                
+    
+                
             }
             
         }
@@ -554,15 +536,19 @@
         }
     }
 
+    @media screen and (max-width:360px) {
+        .cta {
+            padding-top: 1.6rem;
+        }
 
+        footer {
+            margin-top: -50px;
 
-
-
-    
-
-
-
-
+            .footer-texto {
+                font-size: 1.8rem;
+            }
+        }
+    }
 
 
 
