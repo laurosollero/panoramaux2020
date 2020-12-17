@@ -11,8 +11,11 @@ body.page-home
                 h1.intro-titulo O mercado de UX em um ano pandêmico
                 p.intro-texto Home office, colaboração remota, pesquisa a distância. O que mudou na rotina de trabalho e na vida de quem trabalha com UX no Brasil em 2020?
 
-                a.btn(href="https://pt.surveymonkey.com/r/panoramaux") Responda já
-                span.intro-small Leva 10 minutinhos. As respostas são aceitas até 05/12/2020.
+                p Obrigada a todos que participaram desta edição do PanoramaUX.#[br]Tivemos um recorde de respostas, com 1770 entradas válidas ao questionário. Logo mais teremos os resultados por aqui.
+                
+                p #[a(href="#newslleter") Inscreva-se na newsletter] para receber o resultado e outras novidades.
+
+                img.grafico-respostas(src="grafico-respostas.png", alt="Gráfico comparativo da quantidade de respostas por ano")
 
         section.highlights
             .section-text
@@ -79,7 +82,7 @@ body.page-home
                         svg.ic-seta(width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg")
                             path(fill-rule="evenodd" clip-rule="evenodd" d="M14.5403 0.426147L23.5838 9.68547C24.1387 10.2537 24.1387 11.1749 23.5838 11.7431L14.5403 21.0024C13.9853 21.5706 13.0855 21.5706 12.5306 21.0024C11.9756 20.4342 11.9756 19.513 12.5306 18.9448L19.1482 12.1692L1.42105 12.1692C0.636228 12.1692 1.00692e-06 11.5178 9.36673e-07 10.7143C8.66424e-07 9.91073 0.636228 9.25932 1.42105 9.25932L19.1482 9.25932L12.5306 2.48378C11.9756 1.91558 11.9756 0.994346 12.5306 0.426148C13.0855 -0.142051 13.9853 -0.142051 14.5403 0.426147Z" fill="#999999")
             
-        section.newsletter
+        section.newsletter#newslleter
             .section-text
                 h2 Newsletter
                 p Quer ser avisado sobre a divulgação do resultado e novas pesquisas? Informe seu e-mail e não se preocupe, não usaremos seus dados para nenhum outro tipo de comunicação.
@@ -91,12 +94,12 @@ body.page-home
                 
         
         
-        
-        section.cta
-            h2.cta-titulo Ainda não respondeu?
-            p.cta-texto Conte para a gente como foi a adaptação da sua rotina de trabalho nesse ano de quarentena e pandemia. 
+        //
+            section.cta
+                h2.cta-titulo Ainda não respondeu?
+                p.cta-texto Conte para a gente como foi a adaptação da sua rotina de trabalho nesse ano de quarentena e pandemia. 
 
-            a.btn(href="https://pt.surveymonkey.com/r/panoramaux") Responda já
+                a.btn(href="https://pt.surveymonkey.com/r/panoramaux") Responda já
         
         footer
             .logos
